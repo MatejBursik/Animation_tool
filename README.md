@@ -4,7 +4,7 @@ A command line program which is going to compile your frames of an animation int
 
 ## Prerequisite
 
-- frames of the animation should be numerically labled from 1
+- frames of the animation should be numerically labeled from 1
 - install python [(link)](https://www.python.org/downloads/)
 - dependency cv2 (`pip install cv2`)
 
