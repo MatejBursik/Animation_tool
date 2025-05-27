@@ -1,4 +1,5 @@
 import cv2, os, sys
+from tqdm import tqdm
 
 def convert(name, fps, imgT, path):
     if not name:
@@ -33,15 +34,14 @@ def convert(name, fps, imgT, path):
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
         video = cv2.VideoWriter(out_path, fourcc, fps, dimensions)
 
-        for i,img in enumerate(images):
+        for i, img in tqdm(enumerate(images), total=len(images), desc="Writing frames"):
             video.write(cv2.imread(img))
-            print(f"({i+1}/{len(images)})")
 
         video.release()
     except:
         return "You are missing image/s"
     
-    return "Finished"
+    return "Done"
 
 arg = sys.argv
 

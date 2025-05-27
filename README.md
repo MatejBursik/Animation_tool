@@ -6,7 +6,7 @@ A command line program which is going to compile your frames of an animation int
 
 - frames of the animation should be numerically labeled from 1
 - install python [(link)](https://www.python.org/downloads/)
-- dependency cv2 (`pip install cv2`)
+- install dependencies (`pip install -r requirements.txt`)
 
 ## Arguments
 
@@ -29,7 +29,3 @@ List of arguments available for the command
 ## Test
 
 In this repository, I provide a set of 45 images to test if it is running correctly. To test it, run command `python act.py --name test --path test` in the cloned repository. It should generate a test.mp4 animation of a dot moving around.
-
-## Future updates
-
-- more output file types (mp4, mov, avi, webm, flv, mkv ...)
